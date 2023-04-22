@@ -5,7 +5,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   display: grid;
-  grid-template-rows: 1% 1fr 1fr 1fr 10%;
+  grid-template-rows: 1% 1fr 1.3fr 1fr 10%;
 }
 
 /* button used in several places */
@@ -33,7 +33,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 8vh;
+  height: 15vh;
   padding: 0px 100px;
   position: relative;
   z-index: 3;
@@ -77,27 +77,24 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  /* width: 100vw; */
   height: 90vh;
   background-image: linear-gradient(to bottom, hsl(0, 0%, 98%), #fff);
 }
 
 section img {
   position: absolute;
-  /* margin-top: -14%; */
 }
 
 .image-one {
-  width: 75vw;
+  width: 75%;
   position: absolute;
   z-index: 1;
-  /* left: 45%; */
   right: -20%;
   top: -35%;
 }
 
 .image-two {
-  width: 50vw;
+  width: 50%;
   position: absolute;
   z-index: 2;
   right: -8%;
@@ -138,17 +135,15 @@ main {
   background-color: hsl(0, 0%, 98%);
   display: grid;
   height: 90vh;
-  grid-template-rows: 1fr 2fr;
   justify-content: center;
   padding-left: 13%;
   padding-right: 10%;
   padding-top: 3%;
-  /* margin-bottom: -12%; */
 }
 
 .main-why-easybank {
-  width: 60%;
-  margin-bottom: 5%;
+  width: 80%;
+  padding-bottom: 5%;
 }
 
 .main-why-easybank h3 {
@@ -165,6 +160,7 @@ main {
 .main-why-reasons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 3%;
 }
 
 .main-why-reasons h5 {
@@ -258,7 +254,6 @@ footer {
 }
 
 .footer-social-media {
-  /* text-align: center; */
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
@@ -311,7 +306,163 @@ footer {
   margin-top: 10%;
 }
 
-/*
-- Lime Green: hsl(136, 65%, 51%)
-- Bright Cyan: hsl(192, 70%, 51%) 
-*/
+/* when screen width changes to less than 301px */
+
+@media (max-width: 300px) {
+  body {
+    width: 90%;
+    grid-template-rows: 1% 0.2fr 0.5fr 1fr 10%;
+  }
+
+  /* section tag*/
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  .section-EasyBank-ad {
+    text-align: center;
+    margin-top: 50%;
+    margin-left: -3%;
+  }
+
+  .section-EasyBank-ad h1 {
+    font-size: 70px;
+  }
+
+  .section-EasyBank-ad p {
+    font-size: 26px;
+  }
+
+  .section-EasyBank-ad button {
+    margin: auto;
+  }
+
+  .image-one {
+    position: relative;
+    margin: auto;
+    width: 120%;
+    top: -70%;
+    left: -10%;
+  }
+
+  .image-two {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    top: -120%;
+  }
+
+  /* main tag*/
+
+  .main-why-easybank {
+    margin: auto;
+    text-align: center;
+  }
+
+  .main-why-easybank h3 {
+    font-size: 70px;
+  }
+
+  .main-why-easybank p {
+    font-size: 30px;
+  }
+
+  .main-why-reasons {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  .main-why-reasons div img {
+    width: 25%;
+    margin-bottom: 15%;
+  }
+
+  .main-why-reasons div h5 {
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .main-why-reasons div p {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 15%;
+  }
+
+  /* Aside */
+
+  aside img {
+    height: 40%;
+  }
+
+  aside h5 {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  aside div {
+    grid-template-columns: 1fr;
+  }
+
+  .aside-article-author {
+    font-size: 26px;
+  }
+
+  .aside-article-title {
+    font-size: 36px;
+    margin-bottom: 5%;
+  }
+
+  .aside-article-description {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  /* Footer */
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+  }
+
+  .footer-links p {
+    font-size: 26px;
+    margin-top: 10%;
+  }
+
+  .footer-request-invite {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .footer-request-invite p {
+    margin-top: 10%;
+    font-size: 26px;
+  }
+
+  .footer-request-invite button {
+    font-size: 26px;
+    height: 70px;
+    width: 70%;
+    border-radius: 35px;
+  }
+
+  .footer-social-media {
+    margin-bottom: -5%;
+  }
+
+  .footer-social-media-logos img {
+    width: 50px;
+    margin-top: -10%;
+  }
+}
